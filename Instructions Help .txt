@@ -1,0 +1,33 @@
+--   Index.js
+const config = {
+  apiKey: "AIzaSyCxZash57TFpgnRwZIOBeyiiaFSWdUe5_4",     /* Add your firebase api key */
+  authDomain: "python-april-2019.firebaseapp.com",
+  databaseURL: "https://python-april-2019.firebaseio.com",
+  projectId: "python-april-2019",
+  storageBucket: "python-april-2019.appspot.com",        
+  messagingSenderId: "136461726751"                     /* Add your firebase sender ID */
+};
+
+
+-- firebase-messaging-sw.js
+firebase.initializeApp({
+  'messagingSenderId': '136461726751'
+});
+
+https://quotidien.framapad.org/p/py_bcn
+
+fcm_url = "https://fcm.googleapis.com/fcm/send"
+headers = {
+    "Content-Type": "application/json",
+    "Authorization": "key=AAAAH8XAtB8:APA91bF77aujd6-XWzfsdwrBR7aIwpla2QmU1MtirzBgLyUm_n7NHtL_wp5p3kPpxQe8ZCN8FsyPAdTCgSyR8KVW8yKZJJ65KhbzU3gFI5UjxIjpFMa74d_NTIfiG3FW8Mma0TrA5LIW"   /* Add firebase server authorization */
+}
+data = {
+    "notification": {
+        "title": "Push notification test",
+        "body": "Test from Python",
+        "click_action": "http://localhost:5000/list",
+        "icon": "https://www.python.org/static/favicon.ico"
+    },
+}
+
+
